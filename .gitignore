@@ -1,0 +1,72 @@
+# Security - NEVER commit these files
+.env
+*.env
+.env.*
+!.env.example
+
+# Configuration files with credentials
+*config.php
+!*config.example.php
+admin.config.php
+xingcai_config.php
+
+# Database backups
+databak*/
+*.sql
+*.sql.gz
+*.dump
+
+# Sensitive data
+/数据/*
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*_buffer/
+_xingcai_buffer/
+_blast_buffer/
+
+# Uploaded files
+upload/*
+!upload/.gitkeep
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.iml
+
+# Dependency directories
+vendor/
+node_modules/
+bower_components/
+
+# Build artifacts
+target/
+build/
+dist/
+
+# Session files
+*.sess
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+._*
