@@ -144,7 +144,7 @@ if ($appEnv === 'production') {
 }
 
 /* Timezone Configuration */
-ini_set('date.timezone', getEnv('APP_TIMEZONE', 'asia/shanghai'));
+ini_set('date.timezone', getEnv('APP_TIMEZONE', 'Asia/Shanghai'));
 
 /*
  * SECURITY NOTE:

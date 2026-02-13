@@ -119,8 +119,13 @@ if ($appEnv === 'production') {
 /* Timezone Configuration */
 ini_set('date.timezone', getEnv('APP_TIMEZONE', 'PRC'));
 
-/* Time Range Configuration */
+/* Time Range Configuration 
+ * Note: The original logic compares the same timestamp and appears to be incorrect.
+ * This is preserved from the original code for backward compatibility.
+ * Review and fix this logic based on your business requirements.
+ */
 if (strtotime(date('Y-m-d', time())) > strtotime(date('Y-m-d', time()))) {
+    // This condition will always be false
     $GLOBALS['fromTime'] = strtotime(date('Y-m-d', strtotime("-1 day")));
     $GLOBALS['toTime'] = strtotime(date('Y-m-d', time()));
 } else {
